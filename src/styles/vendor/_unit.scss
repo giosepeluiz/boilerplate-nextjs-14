@@ -4,7 +4,7 @@
 
 ////
 /// @group functions
-@use 'sass:math';
+@use "sass:math";
 ////
 
 // scss-lint:disable ZeroUnit
@@ -12,7 +12,7 @@
 /// Defines the base font size of the page, which is the value `1rem` is equal to.
 /// @type Number
 /// @group global
-$rem-base: 16px !default;
+$rem-base: 10px !default;
 
 /// Removes the unit (e.g. px, em, rem) from a value, returning the number only.
 /// @param {Number} $num - Number to strip unit from.
@@ -47,7 +47,7 @@ $rem-base: 16px !default;
 // Converts a unitless, pixel, or rem value to em, for use in breakpoints.
 @function -zf-bp-to-em($value) {
   // Pixel and unitless values are converted to rems
-  @if unit($value) == 'px' or unit($value) == '' {
+  @if unit($value) == "px" or unit($value) == "" {
     $value: rem($value);
   }
 
@@ -61,13 +61,15 @@ $rem-base: 16px !default;
 /// @access private
 @function -zf-to-rem($value, $base: $rem-base) {
   // Calculate rem if units for $value is not rem
-  @if (unit($value) != 'rem') {
+  @if (unit($value) != "rem") {
     $value: math.div(strip-unit($value), strip-unit($base)) * 1rem;
   }
 
   // Turn 0rem into 0
   /* stylelint-disable-next-line length-zero-no-unit */
-  @if ($value == 0) { $value: 0; }
+  @if ($value == 0) {
+    $value: 0;
+  }
 
   @return $value;
 }

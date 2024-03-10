@@ -1,4 +1,4 @@
-# Modelo básico de Next.js 13
+# Modelo básico de Next.js 14
 
 Este modelo básico inclui algumas alterações pessoais em relação ao projeto padrão de **Next.js**, dentre elas:
 
@@ -8,7 +8,7 @@ Este modelo básico inclui algumas alterações pessoais em relação ao projeto
   <li>Configurado para Typescript;</li>
   <li>Eslint e Prettier configurados;</li>
   <li>Toda a configuração foi feita usando Yarn;</li>
-  <li>Versão atualizada para Next.js 13.</li>
+  <li>Versão atualizada para Next.js 14.</li>
 </ul>
 
 ## Esquema de Pastas
@@ -55,31 +55,31 @@ Para definir um breakpoint carregue o comando:
 Onde:
 
 <ul>
-  <li>**small-only** = < 600px</li>
-  <li>**small-up** = > 600px</li>
-  <li>**medium-only** = < 900px</li>
-  <li>**medium-up** = > 900px</li>
-  <li>**large-only** = < 1200px</li>
-  <li>**large-up** = > 1200px</li>
+  <li><b>small-only</b> = < 600px</li>
+  <li><b>small-up</b> = > 600px</li>
+  <li><b>medium-only</b> = < 900px</li>
+  <li><b>medium-up</b> = > 900px</li>
+  <li><b>large-only</b> = < 1200px</li>
+  <li><b>large-up</b> = > 1200px</li>
 </ul>
 
 <ul>
-  <li>**height-small** = Altura até 300px</li>
-  <li>**height-medium** = Altura até 500px</li>
-  <li>**height-large** = Altura até 900px</li>
+  <li><b>height-small</b> = Altura até 300px</li>
+  <li><b>height-medium</b> = Altura até 500px</li>
+  <li><b>height-large</b> = Altura até 900px</li>
 </ul>
 
 ### Z-Index
 
-Existem variáveis com z-index pré-definidos, para isso utilize, sem aspas, o padrão: `z-index: z-index(VALOR)`, onde:
+Existem variáveis com z-index pré-definidos, para isso utilize, sem aspas, o padrão: `z-index: z(VALOR)`, onde:
 
 <ul>
-  <li>**above** = 500</li>
-  <li>**modal** = 400</li>
-  <li>**overlay** = 300</li>
-  <li>**dropdown** = 200</li>
-  <li>**default** = 1</li>
-  <li>**below** = -1</li>
+  <li><b>above</b> = 500</li>
+  <li><b>modal</b> = 400</li>
+  <li><b>overlay</b> = 300</li>
+  <li><b>dropdown</b> = 200</li>
+  <li><b>default</b> = 1</li>
+  <li><b>below</b> = -1</li>
 </ul>
 
 ### Caminhos Absolutos (Absolute Paths)
@@ -88,11 +88,26 @@ Para facilitar a importação de módulos, componentes e arquivos, o caminho é 
 
 ### Cores Globais
 
-Também tem as variáveis de cores globais (root), onde utiliza-se `color: --color-esquema-nome`, onde a personalização deve ser feita em `@import "vendor/_colors"` que já vem com alguns modelos pré-carregados.
+Também tem as variáveis de cores globais (root), onde utiliza-se `color: --color-esquema-nome`, cuja personalização deve ser feita em `@import "vendor/_colors"` que já vem com alguns modelos pré-carregados.
+
+### Tamanhos de Fontes
+
+Para facilitar a escrita do código, existem alguns padrões para tamanhos de fontes. Para utilizar, escreva, sem aspas, o padrão: `font-size: font(VALOR)`, onde:
+
+<ul>
+  <li><b>big-title</b> = 64 pixels</li>
+  <li><b>title</b> = 40 pixels</li>
+  <li><b>subtitle</b> = 20 pixels</li>
+  <li><b>global</b> = 16 pixels</li>
+  <li><b>description</b> = 14 pixels</li>
+  <li><b>small</b> = 9 pixels</li>
+</ul>
 
 ### Converter pixels para rem
 
-O ideal é que utilize sempre REM no lugar de PIXELS para a maior parte do código, então utilize `rem(valor em px)`, pois o próprio SCSS fará a conversão. Por exemplo `rem(12)` que seria 12px será convertido para `1.33rem`.
+O ideal é que utilize sempre REM no lugar de PIXELS para a maior parte do código, então utilize `rem(valor em px)`, pois o próprio SCSS fará a conversão. Por exemplo `rem(10)` que seria 10px será convertido para `1rem`.
+
+> ⚠️ IMPORTANTE: A configuração padrão de REM foi alterada da base 16 para a base 10, ou seja, 1 rem é igual a 10 pixels.
 
 ### Outras variáveis
 

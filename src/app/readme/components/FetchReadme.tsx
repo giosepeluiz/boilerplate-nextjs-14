@@ -10,7 +10,7 @@ export default function FetchReadme() {
 
   async function getReadme() {
     const res = await fetch(
-      `https://raw.githubusercontent.com/giosepeluiz/boilerplate-nextjs-13/main/README.md`,
+      `https://raw.githubusercontent.com/giosepeluiz/boilerplate-nextjs-14/main/README.md`,
       { next: { revalidate: 10 } },
     );
 

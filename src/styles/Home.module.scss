@@ -32,11 +32,11 @@
   .title {
     margin: 0;
     line-height: 1.15;
-    font-size: rem(64);
+    font-size: font("big-title");
     color: var(--color-primary-blue);
 
     @include breakpoint("medium-only") {
-      font-size: rem(40);
+      font-size: font("big-title");
     }
   }
 
@@ -48,17 +48,17 @@
 
   .description {
     line-height: 1.5;
-    font-size: rem(24);
+    font-size: font("subtitle");
 
     @include breakpoint("medium-only") {
-      font-size: rem(20);
+      font-size: font("description");
     }
 
     .code {
       background: var(--color-white);
       border-radius: 5px;
       padding: rem(12);
-      font-size: rem(18);
+      font-size: font("global");
     }
   }
 
@@ -113,14 +113,14 @@
 
   .card h2 {
     margin: 0 0 rem(16) 0;
-    font-size: rem(24);
+    font-size: font(subtitle);
     color: var(--color-primary-green);
   }
 
   .card p,
   ul > li {
     margin: 0;
-    font-size: rem(20);
+    font-size: font("description");
     line-height: 1.5;
     color: var(--color-primary-green-dark);
   }
@@ -133,6 +133,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: font("description");
 
   @include breakpoint("medium-only") {
     padding: rem(20);

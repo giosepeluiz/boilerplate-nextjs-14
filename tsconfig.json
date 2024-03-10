@@ -1,3 +1,11 @@
+/**
+ * Opções de compilação para o arquivo de configuração TypeScript.
+ * Define a versão alvo do ECMAScript, bibliotecas incluídas, suporte a JavaScript,
+ * rigorosidade da checagem de tipos, consistência de maiúsculas e minúsculas, configurações de emissão, módulos,
+ * resolução, imports JSON, isolamento, manipulação JSX, compilação incremental,
+ * plugins, aliases de caminho.
+ * Também inclui os arquivos para compilar e excluir da compilação.
+ */
 {
   "compilerOptions": {
     "target": "es5",
@@ -6,6 +14,7 @@
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -23,6 +32,13 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/useWindowWidth.jsx", "src/app/readme/components/FetchReadme.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/useWindowWidth.jsx",
+    "src/app/readme/components/FetchReadme.tsx"
+  ],
   "exclude": ["node_modules"]
 }

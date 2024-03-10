@@ -12,9 +12,9 @@ export default function Home() {
     <div className={styles.container}>
       {/* Conteúdo principal */}
       <main className={styles.main}>
-        <h1 className={styles.title}>Boilerplate de Next.js 13</h1>
+        <h1 className={styles.title}>Boilerplate de Next.js 14</h1>
 
-        <p className={styles.description}>Template padrão para seu projeto Next.js v13.5.3</p>
+        <p className={styles.description}>Template padrão para seu projeto Next.js v14.1.3</p>
 
         <div className={styles.grid}>
           <Link href="/readme" className={styles.card} prefetch={false}>
@@ -26,16 +26,13 @@ export default function Home() {
           </Link>
 
           <Link
-            href="https://github.com/giosepeluiz/boilerplate-nextjs-13"
+            href="https://github.com/giosepeluiz/boilerplate-nextjs-14"
             className={styles.card}
             prefetch={false}>
             <h2>Atualizações &rarr;</h2>
 
             <ul>
-              <li>02{windowWidth && windowWidth < 600 ? "/09/" : " de setembro de "}2021</li>
-              <li>21{windowWidth && windowWidth < 600 ? "/09/" : " de setembro de "}2022</li>
-              <li>07{windowWidth && windowWidth < 600 ? "/05/" : " de maio de "}2023</li>
-              <li>29{windowWidth && windowWidth < 600 ? "/09/" : " de setembro de "}2023</li>
+              <li>10{windowWidth && windowWidth < 600 ? "/03/" : " de março de "}2024</li>
             </ul>
           </Link>
         </div>
