@@ -88,7 +88,7 @@ Para facilitar a importação de módulos, componentes e arquivos, o caminho é 
 
 ### Cores Globais
 
-Também tem as variáveis de cores globais (root), onde utiliza-se `color: --color-esquema-nome`, cuja personalização deve ser feita em `@import "vendor/_colors"` que já vem com alguns modelos pré-carregados.
+Também tem as variáveis de cores globais (root), onde utiliza-se `color: $success`, cuja personalização deve ser feita em `@import "vendor/_colors"` que já vem com alguns modelos pré-carregados.
 
 ### Tamanhos de Fontes
 

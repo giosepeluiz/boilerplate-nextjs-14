@@ -13,13 +13,13 @@
 nav {
   .link {
     text-decoration: none;
-    color: var(--color-brack);
+    color: $black;
     font-weight: bold;
     display: block;
     text-align: center;
 
     &:hover {
-      color: var(--color-gray-4);
+      color: $gray-4;
       text-decoration: underline;
     }
   }
@@ -36,8 +36,8 @@ nav {
 
   pre,
   code {
-    background-color: var(--color-gray-6);
-    color: var(--color-error);
+    background-color: $gray-6;
+    color: $error;
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
     padding: rem(2) rem(5);
@@ -48,17 +48,17 @@ nav {
   pre {
     padding-bottom: rem(20);
     code {
-      color: var(--color-primary);
+      color: $primary-blue;
     }
   }
 
   blockquote {
-    color: var(--color-success);
+    color: $success;
     font-style: italic;
     font-weight: 600;
     padding: rem(5);
     margin: rem(20) 0 0 0;
-    border: 2px solid var(--color-warning);
+    border: 2px solid $warning;
     box-sizing: border-box;
     border-radius: rem(5);
     border-style: dashed;
@@ -67,6 +67,7 @@ nav {
   ul {
     margin: rem(15) 0 rem(10) 0;
   }
+
   hr {
     margin: rem(30) 0 rem(10) 0;
   }

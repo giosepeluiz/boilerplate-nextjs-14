@@ -37,7 +37,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/useWindowWidth.jsx",
+    "src/components/useWindowWidth.tsx",
     "src/app/readme/components/FetchReadme.tsx"
   ],
   "exclude": ["node_modules"]
