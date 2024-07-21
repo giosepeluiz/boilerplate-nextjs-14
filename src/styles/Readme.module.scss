@@ -2,31 +2,21 @@
 
 .container {
   min-height: 100vh;
-  padding: rem(20);
+  padding: 0 $global-padding;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-}
-
-nav {
-  .link {
-    text-decoration: none;
-    color: $black;
-    font-weight: bold;
-    display: block;
-    text-align: center;
-
-    &:hover {
-      color: $gray-4;
-      text-decoration: underline;
-    }
-  }
 }
 
 .main {
   padding: rem(20);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   h1,
   h2,
@@ -38,15 +28,16 @@ nav {
   code {
     background-color: $gray-6;
     color: $error;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
+    font-family: $code-font;
+    font-weight: weight("bold");
     padding: rem(2) rem(5);
     box-sizing: border-box;
-    border-radius: rem(5);
+    border-radius: $global-radius;
   }
 
   pre {
-    padding-bottom: rem(20);
+    padding-bottom: $global-padding;
+
     code {
       color: $primary-blue;
     }
@@ -55,12 +46,12 @@ nav {
   blockquote {
     color: $success;
     font-style: italic;
-    font-weight: 600;
+    font-weight: weight("semi-bold");
     padding: rem(5);
-    margin: rem(20) 0 0 0;
+    margin: $global-margin 0 0 0;
     border: 2px solid $warning;
     box-sizing: border-box;
-    border-radius: rem(5);
+    border-radius: $global-radius;
     border-style: dashed;
   }
 
@@ -70,5 +61,28 @@ nav {
 
   hr {
     margin: rem(30) 0 rem(10) 0;
+  }
+
+  @include breakpoint("small-up") {
+    padding: rem(40);
+  }
+
+  @include breakpoint("medium-up") {
+    padding: rem(80);
+  }
+}
+
+nav {
+  .link {
+    text-decoration: none;
+    color: $black;
+    font-weight: weight("bold");
+    display: block;
+    text-align: center;
+
+    &:hover {
+      color: $gray-4;
+      text-decoration: underline;
+    }
   }
 }

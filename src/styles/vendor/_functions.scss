@@ -5,3 +5,13 @@
 @function font($layer) {
   @return map-get($fonts, $layer);
 }
+
+// Função para obter tamanhos de fonte do mapa de fontes
+@function font($layer) {
+  @return map-get($fonts, $layer);
+}
+
+// Função para obter pesos de fonte do mapa de pesos
+@function weight($layer) {
+  @return map-get($weights, $layer);
+}

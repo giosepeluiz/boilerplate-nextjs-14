@@ -2,7 +2,7 @@
 
 .container {
   min-height: 100vh;
-  padding: 0 rem(8);
+  padding: 0 $global-padding;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@
   align-items: center;
 
   .title a {
-    color: var(--color-primary-blue-dark);
+    color: $primary-blue-dark;
     text-decoration: none;
   }
 
@@ -31,32 +31,24 @@
 
   .title {
     margin: 0;
-    line-height: 1.15;
+    line-height: $global-title-line-height;
     font-size: font("big-title");
-    color: var(--color-primary-blue);
-
-    @include breakpoint("medium-only") {
-      font-size: font("big-title");
-    }
+    color: $primary-blue;
   }
 
   .title,
   .description {
     text-align: center;
-    color: var(--color-primary-blue-dark);
+    color: $primary-blue-dark;
   }
 
   .description {
-    line-height: 1.5;
+    line-height: $global-line-height;
     font-size: font("subtitle");
 
-    @include breakpoint("medium-only") {
-      font-size: font("description");
-    }
-
     .code {
-      background: var(--color-white);
-      border-radius: 5px;
+      background: $white;
+      border-radius: $global-radius;
       padding: rem(12);
       font-size: font("global");
     }
@@ -67,89 +59,100 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 800px;
+    max-width: $global-max-width;
     margin-top: rem(48);
     flex-direction: column;
-
-    @include breakpoint("small-up") {
-      width: 100%;
-      flex-direction: row;
-    }
   }
 
   .card {
-    margin: rem(16);
+    margin: $global-margin;
     padding: rem(24);
     text-align: left;
     color: inherit;
     text-decoration: none;
-    border: 1px solid var(--color-primary-green);
-    border-radius: 10px;
-    transition: color 0.15s ease, border-color 0.15s ease;
-    width: 45%;
+    border: 1px solid $primary-green;
+    border-radius: $global-radius;
+    transition: color $transition-duration, border-color $transition-duration;
+    width: 100%;
     transition-duration: $transition-duration;
     transition-timing-function: linear;
     transform: scale(1);
     transition-property: transform;
 
-    @include breakpoint("small-up") {
-      width: 300px;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $secondary-green;
+      border-color: $primary-green-dark;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      transition-property: transform;
+      transition-duration: $transition-duration;
+      transition-timing-function: linear;
     }
   }
 
-  .card:hover,
-  .card:focus,
-  .card:active {
-    color: var(--color-secondary);
-    border-color: var(--color-primary-green-dark);
-  }
-
-  .card:hover {
-    transform: scale(1.1);
-    transition-property: transform;
-    transition-duration: $transition-duration;
-    transition-timing-function: linear;
-  }
-
   .card h2 {
-    margin: 0 0 rem(16) 0;
-    font-size: font(subtitle);
-    color: var(--color-primary-green);
+    margin: 0 0 $global-margin 0;
+    font-size: font("subtitle");
+    color: $primary-green;
   }
 
   .card p,
   ul > li {
     margin: 0;
     font-size: font("description");
-    line-height: 1.5;
-    color: var(--color-primary-green-dark);
+    line-height: $global-line-height;
+    color: $primary-green-dark;
+  }
+
+  @include breakpoint("small-up") {
+    .grid {
+      flex-direction: row;
+    }
+
+    .card {
+      width: 45%;
+    }
+  }
+
+  @include breakpoint("medium-up") {
+    .title {
+      font-size: font("big-title");
+    }
+
+    .description {
+      font-size: font("description");
+    }
   }
 }
 
 .footer {
   width: 100%;
   height: 100px;
-  border-top: 1px solid var(--color-gray-5);
+  border-top: 1px solid $gray-5;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: font("description");
-
-  @include breakpoint("medium-only") {
-    padding: rem(20);
-  }
 
   a {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    color: var(--color-black);
+    color: $black;
     text-decoration: none;
   }
 
   .logo {
     height: rem(16);
-    margin-left: rem(8);
+    margin-left: $global-padding;
+  }
+
+  @include breakpoint("medium-up") {
+    padding: $global-padding;
   }
 }

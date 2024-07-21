@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "@/styles/Home.module.scss";
 import Link from "next/link";
-import useWindowWidth from "@/components/useWindowWidth.jsx";
+import useWindowWidth from "@/components/useWindowWidth";
 
 export default function Home() {
   const { windowWidth } = useWindowWidth();
@@ -33,6 +33,7 @@ export default function Home() {
 
             <ul>
               <li>10{windowWidth && windowWidth < 600 ? "/03/" : " de março de "}2024</li>
+              <li>21{windowWidth && windowWidth < 600 ? "/07/" : " de julho de "}2024</li>
             </ul>
           </Link>
         </div>

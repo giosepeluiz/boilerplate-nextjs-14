@@ -4,7 +4,6 @@
 // Vendor
 // ==========================================================================
 
-@import "vendor/_colors"; // Global Colors
 @import "vendor/_normalize"; // Clean CSS defaults
 @import "vendor/_defaults"; // Global defaults
 
@@ -31,7 +30,7 @@ h1 {
 
 html,
 body {
-  font-family: $global-font-family;
+  font-family: $primary-font;
   font-size: 1.6rem; // 1.6rem = 16px;
 }
 

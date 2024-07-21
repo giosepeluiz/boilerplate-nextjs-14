@@ -1,3 +1,6 @@
+/// Mixin para aplicar breakpoints responsivos.
+/// @param {String} $point - O breakpoint ou valor customizado.
+/// @content - O conteúdo CSS a ser aplicado dentro do breakpoint.
 @mixin breakpoint($point) {
   @if $point == small-only {
     @media (max-width: 37.4375em) {
@@ -45,7 +48,7 @@
       @content;
     }
   } @else {
-    @media (min-width: #{$point/16}em) {
+    @media (min-width: #{$point / 16}em) {
       @content;
     }
   }

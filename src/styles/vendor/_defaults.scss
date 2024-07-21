@@ -1,8 +1,21 @@
 // ==========================================================================
 // Defaults
 // ==========================================================================
-@import "_unit"; // Convert px to rem, use: rem(value in px);
-@import "_variables"; // SCSS variables
-@import "_breakpoint"; // Breakpoints
-@import "_functions"; // Z-Index: z(name) // Fonts: font(name)
-@import "_colors"; // Colors
+// Importa o arquivo "_unit", que contém funções para converter pixels (px) em rem.
+// Exemplo de uso: rem(valor em px);
+@import "_unit";
+
+// Importa o arquivo "_variables", que define variáveis SCSS utilizadas no projeto.
+@import "_variables";
+
+// Importa o arquivo "_breakpoint", que define os pontos de quebra (breakpoints) para layouts responsivos.
+@import "_breakpoint";
+
+// Importa o arquivo "_functions", que contém funções úteis, como a função z(name) para Z-Index e a função font(name) para fontes.
+@import "_functions";
+
+// Importa o arquivo "_colors", que define as cores utilizadas no projeto.
+@import "_colors";
+
+// Importa o arquivo "_typography", que define a tipografia do projeto.
+@import "_typography";

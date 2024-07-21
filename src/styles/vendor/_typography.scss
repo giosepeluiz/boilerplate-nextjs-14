@@ -1,0 +1,59 @@
+// ==========================================================================
+// Font Family
+// ==========================================================================
+
+// Importa a fonte "Inter" do Google Fonts, que inclui pesos de 100 a 900. O parâmetro "display=swap" garante que a fonte carregue rapidamente e use uma fonte fallback até que a fonte personalizada seja carregada.
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+// Define a variável $primary-font como fonte principal, seguido por fontes de fallback como "-apple-system" e "sans-serif" para garantir compatibilidade com diferentes sistemas operacionais e navegadores.
+$primary-font: "Inter", -apple-system, sans-serif;
+
+// Define a variável $secondary-font como fonte secundária, seguido por "sans-serif" como fallback.
+$secondary-font: "Roboto", sans-serif;
+
+// Define a variável $code-font com a fonte "Courier New" como a fonte para blocos de código, seguida por "Courier" e "monospace" como fallbacks.
+$code-font: "Courier New", Courier, monospace;
+
+// Define a variável $global-font-size com um tamanho de fonte base de 18 pixels, convertendo-o para a unidade rem. Essa variável será usada para garantir consistência no tamanho da fonte em todo o projeto.
+$global-font-size: rem(18);
+
+// Define a variável $global-line-height com um espaçamento de linha de 160% da altura da fonte. Isso ajuda a melhorar a legibilidade do texto, criando espaço suficiente entre as linhas.
+$global-line-height: 160%;
+
+// Define a variável $global-title-line-height com um espaçamento de linha de 120% da altura da fonte para títulos. Um espaçamento menor é geralmente usado para títulos para mantê-los mais compactos.
+$global-title-line-height: 120%;
+
+// Define a variável $global-letter-spacing com um espaçamento entre letras de -0.75. Um valor negativo pode ser usado para ajustar o espaçamento das letras, especialmente para títulos ou fontes específicas que parecem muito espaçadas por padrão.
+$global-letter-spacing: -0.75;
+
+// ==========================================================================
+// Font Weights
+// ==========================================================================
+
+// Definindo pesos de fonte padrão
+$weights: (
+  "thin": 100,
+  "extra-light": 200,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "semi-bold": 600,
+  "bold": 700,
+  "extra-bold": 800,
+  "black": 900,
+);
+
+// ==========================================================================
+// Font Sizes
+// ==========================================================================
+
+// Definindo tamanhos de fonte para diferentes propósitos
+$fonts: (
+  "big-title": rem(64),
+  "title": rem(40),
+  "subtitle": rem(20),
+  "global": rem(16),
+  "description": rem(14),
+  "small": rem(12),
+  "tiny": rem(9),
+);

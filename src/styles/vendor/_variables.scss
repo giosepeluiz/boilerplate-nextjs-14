@@ -1,36 +1,37 @@
 // ==========================================================================
-// Font Family
-// ==========================================================================
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
-$global-font-family: "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif";
-
-// ==========================================================================
 // Measures
 // ==========================================================================
 
+// Definindo a largura máxima global para o layout
 $global-max-width-raw: rem(780);
 $global-max-width: rem($global-max-width-raw);
 
-$global-font-size: rem(18);
-$global-line-height: 160%;
-$global-title-line-height: 120%;
-$global-letter-spacing: -0.75;
-
+// Definindo o raio de borda padrão
 $global-radius: rem(6);
+
+// Definindo o tamanho do módulo global
 $global-module-size: rem(30);
+
+// Adicionando altura e largura mínima para elementos
+$global-min-width: rem(320);
+$global-min-height: rem(50);
+
+// Margens e espaçamentos padrões
+$global-margin: rem(20);
+$global-padding: rem(15);
 
 // ==========================================================================
 // Transitions
 // ==========================================================================
 
+// Duração padrão das transições
 $transition-duration: 305ms;
 $transition-duration-complex: 385ms;
 $transition-duration-entrance: 235ms;
 $transition-duration-exit: 205ms;
 $transition-duration-fast: 150ms;
 
+// Funções de transição (easing functions) para suavizar animações
 $transition-function-ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
 $transition-function-ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
 $transition-function-ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
@@ -40,24 +41,49 @@ $transition-function-ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
 $transition-function-elastic: cubic-bezier(0.175, 0.885, 0.41, 1.46);
 
 // ==========================================================================
-// Arrays
+// Z-Indexes
 // ==========================================================================
 
+// Definindo camadas de profundidade para elementos
 $z-indexes: (
   "above-all": 500,
   "modal": 400,
   "overlay": 300,
   "dropdown": 200,
+  "header": 150,
+  "footer": 100,
   "above": 2,
   "default": 1,
   "below": -1,
 );
 
-$fonts: (
-  "big-title": rem(64),
-  "title": rem(40),
-  "subtitle": rem(20),
-  "global": rem(16),
-  "description": rem(14),
-  "small": rem(9),
-);
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// Mixin para aplicar margens padrão
+@mixin margin($value) {
+  margin: $value;
+}
+
+// Mixin para aplicar padding padrão
+@mixin padding($value) {
+  padding: $value;
+}
+
+// Mixin para aplicar borda arredondada padrão
+@mixin border-radius {
+  border-radius: $global-radius;
+}
+
+// Mixin para aplicar transições padrão
+@mixin transition($property, $duration: $transition-duration, $timing-function: ease) {
+  transition: $property $duration $timing-function;
+}
+
+// Mixin para aplicar fontes
+@mixin font($size, $weight: $font-weights[regular], $family: $primary-font) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+}
